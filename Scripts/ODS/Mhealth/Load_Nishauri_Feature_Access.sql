@@ -53,7 +53,8 @@ INSERT
     [PKV],
     [FeatureAccess],
     [DOB],
-    [FeatureAccessDate]
+    [FeatureAccessDate],
+    [LoadDate]
   )
 VALUES
   (
@@ -80,7 +81,8 @@ VALUES
     b.[FeatureAccess],
     b.[FeatureAccessDate],
     b.[DOB_Date],
-    b.[FeatureAccessDate_Date]
+    b.[FeatureAccessDate_Date],
+    Getdate()
   )
   WHEN MATCHED THEN
 UPDATE
